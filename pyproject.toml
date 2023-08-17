@@ -52,6 +52,10 @@ disallow_untyped_defs = true
 module = ["tests.*"]
 disallow_untyped_defs = false
 
+[[tool.mypy.overrides]]
+module = ["mastodon.*"]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--cov=mastodon_bot --cov-report term-missing"
